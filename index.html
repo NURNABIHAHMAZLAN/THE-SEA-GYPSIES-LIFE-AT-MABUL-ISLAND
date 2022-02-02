@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="icon" href="logo.png">
+<title>Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="stylesheetindex.css" />
+<style>
+    body, html {
+    height: 90%;
+    margin: 0;
+  }
+
+  .bg {
+    /* The image used */
+    background-image: url("bajaulaut1.jpeg");
+  
+    /* Full height */
+    height: 140%; 
+  
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .feedback, .feedback:visited {
+  background-color: #00BFFF;
+  color: #F8F8FF;
+  padding: 20px 25px;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+  .feedback:hover, .feedback:active {
+  background-color: black;
+}
+
+  
+</style>
+</head>
+<body id="home"  >
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="index.html">Home</a>
+  <a href="introduction.html">Introduction</a>
+  <a href="history.html">History</a>
+  <a href="about.html">About Sea Gypsies</a>
+  <a href="news.html">News</a>
+  <a href="adventure.html">Adventure</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="contactus.html">Contact Us</a>
+  <a href="faqs.html">FAQs</a>
+  <a href="aboutus.html">About Us</a>
+</div>
+
+<div id="main">
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; More</span>
+  <br>
+  <br>
+</div>
+
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.body.style.backgroundColor = "#00BFFF";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+  document.body.style.backgroundColor = "#00BFFF";
+}
+</script>
+<img src="logo.png" class="logo" style="width:80px;height:80px;">
+<div class="bg">
+<b><div class="centered">WELCOME TO MABUL ISLAND
+  <a class="feedback" href="feedback.html" title="Click Here"  target="_blank">FEEDBACK</a>
+</div></b> 
+</div>
+
+      <!--footer-->
+      <footer>
+   
+        <section>
+        <br>
+    
+        <a href="about.html"><italic><h4>ABOUT SEA GYPSIES</h4></italic></a>
+        <a href="contactus.html"><italic><h4>CONTACT US</h4></italic></a>
+    
+        <h5> &copy; 2021 SEA GYPSIES LIFE</h5>
+        <h5>DISCLAIMER:THIS WEBSITE FOR ASSIGNMENT PURPOSE ONLY</h5>
+        <h5>Recommended browser Google Chrome. Resolution 1366 x 768.</h5>
+        <h5>Last update 16 Dec 2021</h5>
+    
+              <h5>Go to the
+                <a href="#home">top</a>.
+              </h5>
+    
+        <br>
+        </section>
+       
+       </footer>
+
+
+
+</body>
+</html> 

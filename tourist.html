@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="icon" href="logo.png">
+    <title>Tourist</title>
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+  .column1 {
+             float: center;
+             width: 80%;
+             padding: 10px;
+             height: 1960px; 
+            }
+  form.search input[type=text] {
+  padding: 3px;
+  font-size: 15px;
+  border: 1px solid grey;
+  float: left;
+  width: 75%;
+  background: #f1f1f1;
+}
+
+  body {
+        font-family: Verdana, sans-serif;
+        margin: 0;
+       }
+
+* {
+  box-sizing: border-box;
+}
+
+.row > .column {
+  padding: 0 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.row {
+      width: 125%;
+}
+.column {
+  float: left;
+  width: 25%;
+}
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+img {
+  margin-bottom: -4px;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.paragraph {
+            text-align: center;
+            line-height: 1.8;
+}
+article{        
+        background-color: ghostwhite;
+        right: 40%;
+        width: 125%;
+        }
+
+.container {
+  border: 2px solid #ccc;
+  background-color: #eee;
+  border-radius: 5px;
+  padding: 16px;
+  margin: 12px 0
+}
+
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.container img {
+  float: left;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.container span {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+@media (max-width: 500px) {
+  .container {
+      text-align: center;
+  }
+  .container img {
+      margin: auto;
+      float: none;
+      display: block;
+  }
+}
+
+footer {
+  background-color: #00BFFF;
+  padding: 10px;
+  width: 125%;
+  text-align: center;
+  color: white;
+}
+                
+</style>
+</head>
+<body>
+    <header>
+        <img src="header.jpeg" title="header"   alt="Header" style="width:1250px;height:500px;">
+      </header>
+      <section>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="introduction.html">Introduction</a></li>
+        <li><a href="history.html">History</a></li>
+        <li><a href="about.html">About Sea Gypsies</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="adventure.html">Adventure</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+        <li><a href="faqs.html">FAQs</a></li>
+      <div class="search-container">
+      <form class="search" action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
+      </div>
+      <div style="padding-left:16px"> </div>
+      </ul>
+<div class="column1" style="background-color:#FFFFFF;">
+
+  <div class="paragraph">
+  <article id="tourist" style="height: auto;" >
+      <p>Mabul Island is a beach island located in northeastern Semporna and is one of the most famous diving spots in the world.
+         The average traveler comes here to experience water sports such as swimming, snorkeling and scuba diving. 
+         There are also a variety of holiday homes and houseboats around the island.</p>
+      <p>Mabul is also renowned for its amazing array of macrolife, making it an underwater photographer’s dream location to 
+        capture some of the rarest ecological species on film. Flamboyant cuttlefish, blue-ringed octopus, spike-fin gobies,
+         frogfish and moray eels are just some of the spectacular critters you will encounter beneath the waters of Mabul.</p>
+      <p>The island is a small oval shaped island fringed by sandy beaches and perched on the northwest corner of a larger 
+        200-hectare reef. The reef is on the edge of the continental shelf and the seabed surrounding the reef slopes out 
+        to 25–30m deep. In addition, Mabul is also a local island-village. Accommodation ranges from backpacker styled lodges 
+        to water bungalows.</p>
+      <P>Although all the excitement is underwater, you can always set your scuba gear aside for a day to laze on Mabul’s soft 
+        sand to work on your tan. It is about a 45 minute boat ride from the Semporna town jetty.</P>
+      </article>
+    </div>
+
+<div class="slide">
+  <h2 style="text-align:center">MABUL ISLAND'S ATTRACTIONS</h2>
+
+<div class="row">
+  <div class="column">
+    <img src="tourist1.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="tourist2.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="tourist3.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="tourist4.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="tourist5.jpg" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="tourist6.jpg" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="tourist7.jpg" style="width:100%" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
+  </div>
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 7</div>
+      <img src="tourist1.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 7</div>
+      <img src="tourist2.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 7</div>
+      <img src="tourist3.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">4 / 7</div>
+      <img src="tourist4.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">5 / 7</div>
+      <img src="tourist5.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">6 / 7</div>
+      <img src="tourist6.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">7 / 7/div>
+      <img src="tourist7.jpg" style="width:100%">
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+
+    <div class="column">
+      <img class="demo cursor" src="tourist1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Tourist">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="tourist2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Tourist">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="tourist3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Snorkelling">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="tourist4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Ocean">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="tourist5.jpg" style="width:100%" onclick="currentSlide(5)" alt="Tourist">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="tourist6.jpg" style="width:100%" onclick="currentSlide(6)" alt="Tourist">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="tourist7.jpg" style="width:100%" onclick="currentSlide(7)" alt="Tourist">
+    </div>
+  </div>
+</div>
+</div>
+
+<script>
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+<h2>Comments</h2>
+
+<div class="container">
+  <img src="profile1.jpg" alt="Avatar" style="width:90px">
+  <p><span>Adika</span> from Indonesia</p>
+  <p>It was a memorable vacation!</p>
+</div>
+
+<div class="container">
+  <img src="profile2.jpg" alt="Avatar" style="width:90px">
+  <p><span>Rebecca Flex.</span> from Singapore</p>
+  <p>I met the sea gypsies and they are harmless and friendly. BEST JOURNEY EVER!</p>
+</div>
+
+<div class="container">
+  <img src="profile3.jpg" alt="Avatar" style="width:90px">
+  <p><span>Christ Peter</span> From Australia</p>
+  <p>It's beautiful and a worthy experience especially for divers.</p>
+</div>
+<div class="container">
+  <img src="profile4.jpg" alt="Avatar" style="width:90px">
+  <p><span>Lily</span> from USA</p>
+  <p>Will come back in the future! Wait for me!</p>
+</div><br>
+
+      <!--footer-->
+      <footer>
+   
+        <section>
+        <br>
+    
+        <a href="about.html"><italic><h4>ABOUT SEA GYPSIES</h4></italic></a>
+        <a href="contactus.html"><italic><h4>CONTACT US</h4></italic></a>
+    
+        <h5> &copy; 2021 SEA GYPSIES LIFE</h5>
+        <h5>DISCLAIMER:THIS WEBSITE FOR ASSIGNMENT PURPOSE ONLY</h5>
+        <h5>Recommended browser Google Chrome. Resolution 1366 x 768.</h5>
+        <h5>Last update 16 Dec 2021</h5>
+    
+              <h5>Go to the
+                <a href="#tourist">top</a>.
+              </h5>
+    
+        <br>
+        </section>
+       
+       </footer>
+</body>
+</html>

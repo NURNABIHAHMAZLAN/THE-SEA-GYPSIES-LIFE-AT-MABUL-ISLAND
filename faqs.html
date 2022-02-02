@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="icon" href="logo.png">
+    <title>FAQs</title>
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+        .column1 {
+                   float: center;
+                   width: 80%;
+                   padding: 10px;
+                   height: 800px; 
+                }
+                .footer { 
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+  background-color: #00BFFF;
+}
+.background{
+  background-image: url('https://wallpaperaccess.com/full/1166669.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+
+.faqs-container {
+  font-family: "Roboto", sans-serif;
+  max-width: 700px;
+  margin: 0 auto;
+  margin-top: -30px;
+}
+
+.faqs-container .questions-container {
+  box-shadow: 0 4px 8px -3px rgba(0, 0, 0, 0.3);
+}
+
+.faqs-container h2 {
+  padding: 4px 32px;
+  font-size: 28px;
+}
+
+.faqs-container .faq-header {
+  display: flex;
+  background: #03071e;
+  color: #f1faee;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.faqs-container .faq-header .open,
+.faqs-container .faq-header .close {
+  position: absolute;
+  right: 0;
+  padding: 0 32px;
+  font-size: 22px;
+  font-weight: bold;
+  transform: translateY(-8px);
+  opacity: 0;
+  transition: all 500ms;
+}
+
+.faqs-container .faq-header .open.active,
+.faqs-container .faq-header .close.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.faqs-container .faq-header h3 {
+  font-size: 20px;
+  padding: 0 32px;
+}
+
+.faqs-container .content {
+  padding: 0 32px;
+  background: #fdfffc;
+  line-height: 2;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 500ms;
+}
+
+.faqs-container .content.active {
+  max-height: 600px;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <img src="header.jpeg" title="header"   alt="Header" style="width:1250px;height:500px;">
+      </header>
+      <section>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="introduction.html">Introduction</a></li>
+        <li><a href="history.html">History</a></li>
+        <li><a href="about.html">About Sea Gypsies</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="adventure.html">Adventure</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+        <li><a href="faqs.html">FAQs</a></li>
+      <div class="search-container">
+      <form class="search" action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
+      </div>
+      <div style="padding-left:16px"> </div>
+      </ul>
+     <div class="background">
+      <div class="faqs-container">
+        <center> <h2 id = frequentlyaskedquestion></id> Frequently Asked Questions (FAQs)</h2></center>
+  
+        <div class="questions-container">
+          <div class="content-container">
+            <div class="faq-header">
+              <h3>1.	Why are they called Sea Gypsies and where can we find them? </h3>
+              <span class="open active">+</span>
+              <span class="close">-</span>
+            </div>
+  
+            <div class="content">
+              <p>
+                They are known as ‘Sea Gypsies’ due to their nomadic and seafaring way of life. 
+                They may be found in Mabul, Bohey Dulang, Sibuan, Maiga, Mantabuan, Selakan & Omadal.
+              </p>
+  
+            </div>
+          </div>
+  
+          <div class="content-container">
+            <div class="faq-header">
+              <h3> 2.	What is the current population?</h3>
+              <span class="open active">+</span>
+              <span class="close">-</span>
+            </div>
+  
+            <div class="content">
+              <p>
+                The sea gypsies have roamed the waters of the Coral Triangle between Malaysia, the Philippines, and Indonesia for many generations. 
+                A great number have given up their nomadic lifestyle to settle permanently on land in search of greater stability that is known as the Bajau Darat 
+                but many still retain their gypsy-esque lifestyle and the number of Bajau Laut living around Semporna is estimated to be upwards of 3000.
+              </p>
+            </div>
+          </div>
+  
+          <div class="content-container">
+            <div class="faq-header">
+              <h3> 3.	What is their lifestyle? </h3>
+              <span class="open active">+</span>
+              <span class="close">-</span>
+            </div>
+  
+            <div class="content">
+              <p>
+                The sea gypsies rarely, if ever, set foot on land. When they do spend the occasional night or two on solid ground, they often report feeling ‘landsick’.
+              </p>
+  
+              <p>
+                Preferring the sea, they would only go ashore for business. This may include selling their catches, collecting fresh water for drinking or wood 
+                for making boats and as well, to bury the dead. Most would return to their boats by nightfall.
+              </p>
+            </div>
+          </div>
+          
+          <div class="content-container">
+            <div class="faq-header">
+              <h3>4.	What is their occupation?</h3>
+              <span class="open active">+</span>
+              <span class="close">-</span>
+            </div>
+  
+            <div class="content">
+              <p>
+                They hunt for fish, lobsters, sea cucumbers (tripang), and other marine life. They earn their living solely based on the ocean’s resources.
+              </p>
+  
+            </div>
+          </div>
+          
+          <div class="content-container">
+            <div class="faq-header">
+              <h3>5.	What skills do they master?</h3>
+              <span class="open active">+</span>
+              <span class="close">-</span>
+            </div>
+  
+            <div class="content">
+              <p>
+                The sea gypsies are exceptional free divers. Many have mastered the art of freediving to depths of well over 20m while holding their breath for several minutes. 
+              </p>
+  
+              <p>
+                Apart from being excellent at fishing and diving, they are also skilled at constructing pile houses and boats called lepa. Beautifully decorated, 
+                technicolor lepa boats feature in the popular Regatta Lepa festival.
+              </p>
+            </div>
+          </div>
+          
+          <div class="content-container">
+            <div class="faq-header">
+              <h3>6.	What is the status of the Sea Gypsies people now? </h3>
+              <span class="open active">+</span>
+              <span class="close">-</span>
+            </div>
+  
+            <div class="content">
+              <p>
+                Today, the area has transformed into a bustling tourist destination attracting divers and holiday-goers from the world over. However, the plight of the sea gypsies 
+                has remained largely unchanged. They have always been and still are, ‘stateless’ people. 
+              </p>
+  
+              <p>
+                According to the United Nations, there are more than 10 million stateless people in the world. Most are not afforded citizenship status by either
+                Malaysia, the Philippines, or Indonesia, as they have been deemed to reside in the waters of the Sulu and the Celebes Sea, and not strictly on land owned by any 
+                of the countries.
+              </p>
+            </div>
+          </div>
+          
+          <div class="content-container">
+            <div class="faq-header">
+              <h3>7.	What is Regatta Lepa? </h3>
+              <span class="open active">+</span>
+              <span class="close">-</span>
+            </div>
+  
+            <div class="content">
+              <p>
+                Regatta Lepa water festival showcases the customs and traditions of the ‘Sea Gypsies‘. The highlight includes a floating parade of colourful lepa boats, lepa boat racing 
+                and tug-of-war, beauty pageant, and fireworks. Takes place annually around mid to end of April and lasts 2-3 days.
+              </p>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+  
+  <div class="footer" >
+    <section class"container">
+      <br>
+  
+      <a href="about.html"><italic><h4>ABOUT SEA GYPSIES</h4></italic></a>
+      <a href="contactus.html"><italic><h4>CONTACT US</h4></italic></a>
+  
+      <h5> &copy; 2021 SEA GYPSIES LIFE</h5>
+      <h5>DISCLAIMER:THIS WEBSITE FOR ASSIGNMENT PURPOSE ONLY</h5>
+      <h5>Recommended browser Google Chrome. Resolution 1366 x 768.</h5>
+      <h5>Last update 16 Dec 2021</h5>
+  
+            <center><h5>Go to the
+              <a href="#frequentlyaskedquestion">top</a>.
+            </h5></center>
+  </div>
+ <script>const faqHeaders = document.querySelectorAll(".faqs-container .faq-header");
+
+  faqHeaders.forEach((header, i) => {
+    header.addEventListener("click", () => {
+      header.nextElementSibling.classList.toggle("active");
+  
+      const open = header.querySelector(".open");
+      const close = header.querySelector(".close");
+  
+      if (header.nextElementSibling.classList.contains("active")) {
+        open.classList.remove("active");
+        close.classList.add("active");
+      } else {
+        open.classList.add("active");
+        close.classList.remove("active");
+      }
+    });
+  });</script>
+</body>
+</html>
